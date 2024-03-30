@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+.react-flow__handle {
+  height: 18px !important;
+  width: 18px !important;
+}
+
+.react-flow__handle-bottom {
+  bottom: -8px !important;
+  border: 2px solid white !important;
+}
+
+.react-flow__handle-top {
+  top: -8px !important;
+  border: 2px solid black !important;
+}
+
+:where(.css-dev-only-do-not-override-djtmh8).ant-input-outlined {
+  padding: 8px 12px !important;
+  font-size: 18px;
+}
+
+:where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(
+    .ant-btn-disabled
+  ):hover {
+  background: none;
+}
