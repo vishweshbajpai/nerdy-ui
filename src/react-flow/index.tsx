@@ -20,8 +20,7 @@ import ContactPanel from "./panels/ContactPanel";
 import Confetti from "react-confetti";
 
 function ReactFlowForm() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
+  const [nodes, , onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   const setFormSource = useSetRecoilState(formSource);
   const celebrateValue = useRecoilValue(celebrate);
