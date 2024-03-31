@@ -10,8 +10,8 @@ const ContactPanel = () => {
       className="bg-white rounded text-black text-sm px-4 py-1"
     >
       <div className="flex items-center gap-1">
-        Developed with <span style={{ color: "red" }}>♥️</span> by Vishwesh
-        Bajpai
+        Developed with <span style={{ color: "red" }}>♥️</span>
+        by <span className="font-medium">Vishwesh Bajpai</span>
         <a
           href={SocialMediaHandleLinks.linkedIn}
           target="_blank"

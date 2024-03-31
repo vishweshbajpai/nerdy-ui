@@ -30,7 +30,12 @@ import {
 } from "../../utils/enum";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { ILoginResponse, IUserDetails } from "../../types";
-import { ButtonLabels, hideAllLevels, updateLevels } from "../helper";
+import {
+  ButtonLabels,
+  fitToView,
+  hideAllLevels,
+  updateLevels,
+} from "../helper";
 import { getUserBirthYear, isBinaryNumber } from "../../utils/common";
 
 const CommonButton = () => {
@@ -224,6 +229,11 @@ const CommonButton = () => {
     audio.currentTime = 0;
     audio.play();
     setCelebrateValue(true);
+    message.success(`Congratulations ${userDetails.name}!`);
+    const nodeIds = reactFlow.getNodes().map((node) => ({
+      id: node.id,
+    }));
+    fitToView(nodeIds, reactFlow, 5000);
   };
 
   const clickHandler = async () => {

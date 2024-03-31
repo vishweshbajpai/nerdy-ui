@@ -127,12 +127,13 @@ export const fitToView = (
         id: string;
       })[]
     | undefined,
-  reactFlow: ReactFlowInstance<any, any>
+  reactFlow: ReactFlowInstance<any, any>,
+  duration = 1000
 ) => {
   setTimeout(() => {
     reactFlow.fitView({
       nodes,
-      duration: 1000,
+      duration,
       padding: 0.1,
       includeHiddenNodes: true,
     });
