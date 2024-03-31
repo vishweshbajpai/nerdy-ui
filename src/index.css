@@ -44,3 +44,23 @@ body {
 .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
   background: none;
 }
+
+.info-panel-icon > svg {
+  height: 20px;
+  width: 20px;
+}
+
+.info-panel-black-dot {
+  height: 14px;
+  width: 14px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.info-panel-white-dot {
+  height: 14px;
+  width: 14px;
+  border: 1px solid black !important;
+  background-color: white;
+  border-radius: 50%;
+}

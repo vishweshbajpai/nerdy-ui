@@ -23,6 +23,7 @@ import { updateLevels, edgeTypes, initialNodes, nodeTypes } from "./helper";
 import { IUserDetails } from "../types";
 import ContactPanel from "./panels/ContactPanel";
 import Confetti from "react-confetti";
+import InfoPanel from "./panels/InfoPanel";
 
 function ReactFlowForm() {
   const [nodes, , onNodesChange] = useNodesState(initialNodes);
@@ -84,6 +85,7 @@ function ReactFlowForm() {
       >
         <MiniMap pannable nodeStrokeWidth={3} />
         <ContactPanel />
+        <InfoPanel />
       </ReactFlow>
       {celebrateValue && <Confetti />}
       <audio />
