@@ -41,8 +41,6 @@ body {
   font-size: 18px;
 }
 
-:where(.css-dev-only-do-not-override-djtmh8).ant-btn-default:not(:disabled):not(
-    .ant-btn-disabled
-  ):hover {
+.ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
   background: none;
 }

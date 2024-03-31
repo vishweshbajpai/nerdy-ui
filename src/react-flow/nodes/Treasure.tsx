@@ -24,7 +24,7 @@ const Treasure = () => {
 
   return (
     <LevelsLayout
-      title="Treasure"
+      title="The Treasure"
       info={infoMessage}
       audioSrc="/TreasureAudio.wav"
     >

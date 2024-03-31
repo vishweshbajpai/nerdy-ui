@@ -23,7 +23,11 @@ const Broken = () => {
   };
 
   return (
-    <LevelsLayout title="Broken" info={infoMessage} audioSrc="/BrokenAudio.wav">
+    <LevelsLayout
+      title="Malfunction"
+      info={infoMessage}
+      audioSrc="/BrokenAudio.wav"
+    >
       <div className="abnormal mt-24 relative">
         <Input
           value={brokenValue}
