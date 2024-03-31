@@ -229,7 +229,9 @@ const CommonButton = () => {
     audio.currentTime = 0;
     audio.play();
     setCelebrateValue(true);
-    message.success(`Congratulations ${userDetails.name}!`);
+    message.success(
+      `Congratulations ${userDetails.name}! You're a nerd of devtools!`
+    );
     const nodeIds = reactFlow.getNodes().map((node) => ({
       id: node.id,
     }));
@@ -262,7 +264,11 @@ const CommonButton = () => {
           formSourceValue ? "bg-[#1677ff] hover:bg-slate-900" : "cursor-no-drop"
         }`}
         onClick={clickHandler}
-        loading={loginMutation.isPending || signUpMutation.isPending}
+        loading={
+          loginMutation.isPending ||
+          signUpMutation.isPending ||
+          updateLevelsMutation.isPending
+        }
       >
         {!formSourceValue ? (
           <DisconnectedIcon />
