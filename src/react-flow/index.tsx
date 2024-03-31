@@ -11,7 +11,12 @@ import "reactflow/dist/style.css";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { celebrate, formSource } from "../recoil/atom";
 import { useQuery } from "@tanstack/react-query";
-import { LocalStorageKeys, NodeIds, ReactQueryKeys } from "../utils/enum";
+import {
+  EdgeTypes,
+  LocalStorageKeys,
+  NodeIds,
+  ReactQueryKeys,
+} from "../utils/enum";
 import { getLevelsOfUserService } from "../services";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { updateLevels, edgeTypes, initialNodes, nodeTypes } from "./helper";
@@ -50,7 +55,11 @@ function ReactFlowForm() {
 
   const onConnect = useCallback(
     (connection: Connection) => {
-      const edge = { ...connection, type: "deletable-edge", animated: true };
+      const edge = {
+        ...connection,
+        type: EdgeTypes.deletableEdge,
+        animated: true,
+      };
       setEdges(() => addEdge(edge, []));
       setFormSource(connection.source as NodeIds);
       console.log("Connection: ", connection);

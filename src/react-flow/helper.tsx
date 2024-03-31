@@ -4,7 +4,7 @@ import SignupForm from "./nodes/SignupForm";
 import LoginForm from "./nodes/LoginForm";
 import CommonButton from "./nodes/CommonButton";
 import Journey from "./nodes/Journey";
-import { NodeIds, NodeTypes } from "../utils/enum";
+import { EdgeTypes, NodeIds, NodeTypes } from "../utils/enum";
 import Broken from "./nodes/Broken";
 import Ninja from "./nodes/Ninja";
 import Treasure from "./nodes/Treasure";
@@ -84,7 +84,7 @@ export const nodeTypes: Record<NodeTypes, () => JSX.Element> = {
 };
 
 export const edgeTypes = {
-  "deletable-edge": DeletableEdge,
+  [EdgeTypes.deletableEdge]: DeletableEdge,
 };
 
 export const ButtonLabels: Record<NodeIds, string> = {

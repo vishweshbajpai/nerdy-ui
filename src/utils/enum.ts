@@ -43,6 +43,10 @@ export enum NodeTypes {
   winner = "winner",
 }
 
+export enum EdgeTypes {
+  deletableEdge = "deletableEdge",
+}
+
 export enum SocialMediaHandleLinks {
   linkedIn = "https://www.linkedin.com/in/vishweshbajpai/",
   github = "https://github.com/vishweshbajpai",
