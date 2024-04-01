@@ -37,6 +37,7 @@ const SignupForm = () => {
             : "shadow-2xl shadow-black"
         }`}
         ref={containerRef}
+        title={<span className="text-3xl text-center">Sign Up</span>}
       >
         <Form layout="vertical" form={form}>
           <Form.Item

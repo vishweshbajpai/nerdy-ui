@@ -35,6 +35,7 @@ const LoginForm = () => {
             ? "shadow-2xl shadow-white"
             : "shadow-2xl shadow-black"
         }`}
+        title={<span className="text-3xl text-center">Login</span>}
       >
         <Form layout="vertical" form={form}>
           <Form.Item

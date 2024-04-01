@@ -64,3 +64,8 @@ body {
   background-color: white;
   border-radius: 50%;
 }
+
+.ant-card-head-title {
+  text-align: center;
+  padding: 14px 0;
+}
