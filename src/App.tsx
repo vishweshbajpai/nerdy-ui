@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     if (window.innerWidth < 768) {
-      message.warning("Please use a larger screen for better experience");
+      message.warning("This app is not supported on mobile devices", 0);
     }
   }, []);
 
