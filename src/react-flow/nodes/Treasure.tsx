@@ -1,6 +1,6 @@
 import React from "react";
 import LevelsLayout from "../../components/LevelsLayout";
-import { Input } from "antd";
+import { Input, Tooltip } from "antd";
 import { Handle, Position } from "reactflow";
 import { useRecoilState } from "recoil";
 import { treasureKey } from "../../recoil/atom";
@@ -36,7 +36,9 @@ const Treasure = () => {
           onChange={onChangeHandler}
           className="text-xl mt-24"
         />
-        <Handle type="source" position={Position.Bottom} />
+        <Tooltip title="Click and Drag">
+          <Handle type="source" position={Position.Bottom} />
+        </Tooltip>
       </div>
     </LevelsLayout>
   );

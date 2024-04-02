@@ -1,6 +1,6 @@
 import React from "react";
 import LevelsLayout from "../../components/LevelsLayout";
-import { Input } from "antd";
+import { Input, Tooltip } from "antd";
 import { Handle, Position } from "reactflow";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { IUserDetails } from "../../types";
@@ -52,7 +52,9 @@ const Ninja = () => {
           onChange={onChangeHandler}
           className="w-[170px]"
         />
-        <Handle type="source" position={Position.Bottom} />
+        <Tooltip title="Click and Drag">
+          <Handle type="source" position={Position.Bottom} />
+        </Tooltip>
       </div>
     </LevelsLayout>
   );

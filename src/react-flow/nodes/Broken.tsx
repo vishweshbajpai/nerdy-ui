@@ -1,7 +1,7 @@
 import React from "react";
 import LevelsLayout from "../../components/LevelsLayout";
 import { Handle, Position } from "reactflow";
-import { Input } from "antd";
+import { Input, Tooltip } from "antd";
 import { useRecoilState } from "recoil";
 import { broken } from "../../recoil/atom";
 import { HiddenKeys } from "../../utils/enum";
@@ -35,7 +35,9 @@ const Broken = () => {
           onChange={onChangeHandler}
           className="text-xl"
         />
-        <Handle type="source" position={Position.Bottom} />
+        <Tooltip title="Click and Drag">
+          <Handle type="source" position={Position.Bottom} />
+        </Tooltip>
       </div>
     </LevelsLayout>
   );

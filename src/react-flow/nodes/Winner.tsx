@@ -1,6 +1,7 @@
 import { Handle, Position } from "reactflow";
 import ChildIcon from "../../assets/icons/ChildIcon";
 import FlagIcon from "../../assets/icons/FlagIcon";
+import { Tooltip } from "antd";
 
 const Winner = () => {
   return (
@@ -11,7 +12,9 @@ const Winner = () => {
         </div>
         <ChildIcon />
       </div>
-      <Handle type="source" position={Position.Bottom} />
+      <Tooltip title="Click and Drag">
+        <Handle type="source" position={Position.Bottom} />
+      </Tooltip>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import {
 } from "reactflow";
 import { useSetRecoilState } from "recoil";
 import { formSource } from "../../recoil/atom";
+import { Tooltip } from "antd";
 
 function DeletableEdge({ id, sourceX, sourceY, targetX, targetY }: any) {
   const { setEdges } = useReactFlow();
@@ -33,9 +34,11 @@ function DeletableEdge({ id, sourceX, sourceY, targetX, targetY }: any) {
             setFormSource(null);
           }}
         >
-          <div className="bg-white text-2xl font-semibold h-6 w-6 flex items-center justify-center rounded-full text-black hover:text-red-500 hover:border hover:border-red-500">
-            -
-          </div>
+          <Tooltip title="Remove">
+            <div className="bg-white text-2xl font-semibold h-6 w-6 flex items-center justify-center rounded-full text-red-500 border border-red-500">
+              -
+            </div>
+          </Tooltip>
         </button>
       </EdgeLabelRenderer>
     </>

@@ -1,4 +1,4 @@
-import { Input } from "antd";
+import { Input, Tooltip } from "antd";
 import AirplaneIcon from "../../assets/icons/AirplaneIcon";
 import RightArrowIcon from "../../assets/icons/RightArrowIcon";
 import LevelsLayout from "../../components/LevelsLayout";
@@ -51,7 +51,9 @@ const Journey = () => {
           />
         </div>
       </div>
-      <Handle type="source" position={Position.Bottom} />
+      <Tooltip title="Click and Drag">
+        <Handle type="source" position={Position.Bottom} />
+      </Tooltip>
     </LevelsLayout>
   );
 };

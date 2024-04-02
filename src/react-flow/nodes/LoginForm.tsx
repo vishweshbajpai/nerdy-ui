@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Form, Input, Card } from "antd";
+import { Form, Input, Card, Tooltip } from "antd";
 import { Handle, Position } from "reactflow";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { formSource, loginForm } from "../../recoil/atom";
@@ -58,7 +58,9 @@ const LoginForm = () => {
           </Form.Item>
         </Form>
       </Card>
-      <Handle type="source" position={Position.Bottom} />
+      <Tooltip title="Click and Drag">
+        <Handle type="source" position={Position.Bottom} />
+      </Tooltip>
     </>
   );
 };
